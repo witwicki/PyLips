@@ -28,7 +28,13 @@ def handle_message(message):
     print(f"received to {message['name']}: {message['action_type']}")
     emit('face_control', message, broadcast=True)
 
+
+def main(host='0.0.0.0', port=8000):
+    socketio.run(app, host=host, port=port)
+
+
 if __name__ == '__main__':
     args = parser.parse_args()
-    socketio.run(app, host=args.host, port=args.port)
-    
+    main(host=args.host, port=args.port)
+
+
