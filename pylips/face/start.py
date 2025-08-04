@@ -22,7 +22,7 @@ def handle_message(message):
     print(f"received to {message['name']}: {message['action_type']}")
     emit('face_control', message, broadcast=True)
 
-def main()
+def main():
     #TODO: add argparse for host and port
     socketio.run(app, host='0.0.0.0', port=8000)
 
