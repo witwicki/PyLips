@@ -130,6 +130,28 @@ class RobotFace:
         pygame.mixer.Channel(self.channel).play(sound)
 
 
+    def lip_visemes(self, tag):
+        '''
+            Plays a speech file that was saved to the disk.
+
+            Args:
+                tag (str): the tag that was used to save the file. This should be a string with
+                    no extensions or folder paths -- e.g., 'statement1' or 'question2'
+        '''
+
+        fname, times, visemes = self.tts.get_audio_and_visemes(tag)
+
+        request = { 
+                'name': self.name,
+                'action_type': 'say',
+                'visemes': visemes,
+                'times': times,
+             }
+        
+        # animate face
+        self.io.emit('face_control', request)
+
+
     def stop_speech(self):
         '''
         Cancels the current speech command.

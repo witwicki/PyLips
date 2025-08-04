@@ -1,5 +1,7 @@
 # PyLips
 
+[![Downloads](https://static.pepy.tech/badge/pylips)](https://pepy.tech/project/pylips) [![PyPI version](https://badge.fury.io/py/pylips.svg)](https://badge.fury.io/py/pylips) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ![The PyLips Logo](docs/source/_static/imgs/pylips_text.png)
 
 **PyLips** is a Python-based interface for developing screen-based conversational agents.
@@ -57,4 +59,15 @@ face.say("Hello, welcome to pylips!")
 
 If all goes well, the face should have said the message!
 
+
+If you use PyLips in an academic publication, please use this
+```
+@inproceedings{dennler2024pylips,
+  title={PyLips: an Open-Source Python Package to Expand Participation in Embodied Interaction},
+  author={Dennler, Nathaniel Steele and Torrence, Evan and Yoo, Uksang and Nikolaidis, Stefanos and Mataric, Maja},
+  booktitle={Adjunct Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology},
+  pages={1--4},
+  year={2024}
+}
+```
 
